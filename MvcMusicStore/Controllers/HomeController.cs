@@ -15,16 +15,24 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "I like Cake.";
 
             return View();
         }
+
+
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Message(string name)
+        {
+            ViewBag.Message = "Hello World, This is " + name;
+            return PartialView();
         }
     }
 }
